@@ -1,0 +1,116 @@
+.body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.calc-container{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: black;
+    padding: 10px;
+    border-bottom-left-radius: 25px; /* Rounds the top-left corner */
+    border-bottom-right-radius: 25px; /* Rounds the top-right corner */
+
+}
+
+#display{
+    text-align: right;
+    width: 31.6%;
+    height: 170px;
+    user-select: none;
+    background-color: black;
+    border: none;
+    color: #ffffff;
+    font-size: 5rem;
+    border-top-left-radius: 25px; /* Rounds the top-left corner */
+    border-top-right-radius: 25px; /* Rounds the top-right corner */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#display-value{
+    margin-right: 40px;
+    font: bolder;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+
+.first-three-btns:hover, .number-btns:hover {
+    transition: filter 0.2s ease-out;
+    filter: brightness(130%);
+}
+
+.first-three-btns:active, .number-btns:active{
+    transition: filter 0.2s ease-out;
+    filter: brightness(70%);
+}
+
+#zero-btn{
+    grid-column: span 2;
+    width: 210px;
+    border-radius: 45px;
+    text-align: left;
+    padding-left: 45px;
+}
+#equals-btn{
+    background-color: #ffaf0a;
+}
+.first-three-btns{
+    background-color: #a5a5a5;
+    color: black;
+}
+.operator-btns{
+    background-color: #ffaf0a;
+}
+
+.operator-btns.active{
+    background-color: #ffffff;
+    color: #ffaf0a;
+}
+.operator-btns.inactive{
+    background-color: #ffaf0a;
+    color: #ffffff;
+}
+
+.operator-btns:hover, #equals-btn:hover{
+    filter: brightness(108%);
+}
+
+.operator-btns:active{
+    background-color: #fcb934;
+}
+
+.number-btns{
+    background-color: #333333;
+}
+#add-sign, #all-clear, #minus-btn, #plus-btn, #percent-btn{
+    font-weight: bolder;
+}
